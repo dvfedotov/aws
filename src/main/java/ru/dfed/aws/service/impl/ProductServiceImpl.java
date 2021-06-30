@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.dfed.aws.domain.Product;
 import ru.dfed.aws.domain.dto.ProductDTO;
+import ru.dfed.aws.exception.NotFoundException;
 import ru.dfed.aws.repository.ProductRepository;
 import ru.dfed.aws.service.ProductService;
 import ru.dfed.aws.service.mapper.ProductMapper;
@@ -55,7 +56,7 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findById(id)
             .map(productMapper::toDto)
             .orElseThrow(
-                () -> new RuntimeException(String.format("Товар с кодом %s не найден", id)));
+                () -> new NotFoundException(String.format("Товар с кодом %s не найден", id)));
     }
 
     @Override
