@@ -166,7 +166,9 @@
                         <consoleOutput>true</consoleOutput>
                         <logViolationsToConsole>true</logViolationsToConsole>
                         <failsOnError>true</failsOnError>
-                        <excludes>test/**/*,.mvn/**,.git/**/*,target/**/*,node_modules/**/*,node/**/*</excludes>
+                        <excludes>**/lib/**,test/**/*,.mvn/**,.git/**/*,target/**/*,node_modules/**/*,
+                            node/**/*,**/SecurityConfiguration.java
+                        </excludes>
                         <sourceDirectories>./</sourceDirectories>
                     </configuration>
                     <executions>

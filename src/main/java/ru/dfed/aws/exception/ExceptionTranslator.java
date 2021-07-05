@@ -79,7 +79,8 @@ public class ExceptionTranslator implements ProblemHandling, SecurityAdviceTrait
     }
 
     @ExceptionHandler
-    public ResponseEntity<Problem> handleNotFoundException(NotFoundException ex, NativeWebRequest request) {
+    public ResponseEntity<Problem> handleNotFoundException(NotFoundException ex,
+                                                           NativeWebRequest request) {
 
         Problem problem = Problem.builder()
             .withStatus(Status.BAD_REQUEST)

@@ -1,12 +1,11 @@
 package ru.dfed.aws.domain.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import javax.validation.constraints.NotNull;
 
 public class ProductDTO implements Serializable {
 
-//    @JsonIgnore
+    //    @JsonIgnore
     private Long id;
 
     @NotNull
@@ -14,7 +13,7 @@ public class ProductDTO implements Serializable {
 
     private String partsNumber;
 
-    
+
     public Long getId() {
         return id;
     }
